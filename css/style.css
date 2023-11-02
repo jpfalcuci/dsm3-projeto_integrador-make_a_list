@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.left {
+    padding: 20px;
+    width: 30vw;
+    background: #27488f;
+}
+
+.right {
+    background-color: #f9f3fa;
+    color: #27488f;
+    height: 100vh;
+    overflow: auto;
+    padding: 15px;
+}
+
+.right section {
+    padding: 15px;
+}
+
+.btn {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    color: #d9d9e3;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
