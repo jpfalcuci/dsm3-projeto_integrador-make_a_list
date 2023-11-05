@@ -1,5 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Raleway&display=swap');
+
+:root {
+    --fonte-principal: 'Kaushan Script', cursive;
+    --fonte-secundaria: 'Raleway', sans-serif;
+    --azul: #27488f;
+    --texto-cinza: #d9d9e3;
+    --fundo-cinza: #f9f3fa;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: var(--fonte-secundaria);
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -7,22 +17,26 @@ body {
     overflow: hidden;
 }
 
+h1, h2 {
+    font-family: var(--fonte-principal);
+    font-size: 1.5rem;
+}
+
 .container {
     display: flex;
-    border: 1px solid #ddd;
-    border-radius: 5px;
     overflow: hidden;
 }
 
 .left {
     padding: 20px;
     width: 30vw;
-    background: #27488f;
+    height: 100vh;
+    background: var(--azul);
 }
 
 .right {
-    background-color: #f9f3fa;
-    color: #27488f;
+    background-color: var(--fundo-cinza);
+    color: var(--azul);
     height: 100vh;
     overflow: auto;
     padding: 15px;
@@ -36,8 +50,7 @@ body {
     display: block;
     margin-bottom: 10px;
     padding: 10px 20px;
-    color: #d9d9e3;
-    border: none;
-    border-radius: 4px;
+    color: var(--texto-cinza);
     cursor: pointer;
+    text-decoration: none;
 }
