@@ -1,388 +1,818 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Make a List!</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="./images/logomarca.png">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+      integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="./images/logomarca.png" />
+  </head>
+  <body>
     <div class="container">
-        <div class="left">
-            <a class="btn" href="#apresentacao"><h1>Make a List!</h1></a>
-            <a class="btn" href="#apresentacao">Apresentação</a>
-            <a class="btn" href="#identidade-visual-cores">Identidade Visual</a>
-            <a class="btn" href="#prototipo">Protótipo</a>
-            <a class="btn" href="#front-end">Front-end</a>
-            <a class="btn" href="#back-end">Back-end</a>
-            <a class="btn" href="#documentacao">Documentação</a>
-        </div>
-        <div class="right">
-            <section id="apresentacao">
-                <h2>Apresentação</h2>
-                <p>Este projeto é parte do curso de Desenvolvimento de Software Multiplataforma do 3º semestre da Faculdade de Tecnologia de Franca (Fatec). O projeto abrange as seguintes disciplinas:</p>
-                <ul>
-                    <li><strong>Gestão Ágil de Projetos e Softwares: </strong>Aplicação de metodologias ágeis para o desenvolvimento do projeto.</li>
-                    <li><strong>Banco de Dados Não Relacional: </strong>Implementação do banco de dados MongoDB integração com back-end.</li>
-                    <li><strong>Desenvolvimento Web III: </strong>Criação da interface e desenvolvimento front-end e back-end da aplicação.</li>
-                    <li><strong>Interação Humano Computador: </strong>Consideração de usabilidade e experiência do usuário na interface.</li>
-                </ul>
-            </section>
-            <section id="equipe">
-                <h2>Equipe</h2>
-                <p>A equipe do projeto "Make a List!" é composta por membros do 3 semestre do curso de Desenvolvimento de Software Multiplataforma, cada um responsabilidades principais no projeto, mas também com participação geral de todos na tomada de decisões e no projeto de uma forma geral.</p>
-                <ul>
-                    <li>Eduarda Matos (Líder): Pesquisa de mercado, identidade visual, protótipo, testes de qualidade e usabilidade.</li>
-                    <li>Gabriel Imenes: Front-end e documentação auxiliares.</li>
-                    <li>Igor Achette: Front-end principal.</li>
-                    <li>João Paulo Falcuci: Documentação detalhada, testes de qualidade e usabilidade.</li>
-                    <li>Raul Araújo: Back-end da aplicação e banco de dados.</li>
-                </ul>
-            </section>
-            <section id="sobre-o-projeto">
-                <h2>Sobre o Projeto</h2>
-                <p>A aplicação "Make a List!" é uma plataforma web projetada para simplificar a criação e o compartilhamento de listas de compras de supermercado e outros itens essenciais. A proposta é oferecer aos usuários uma ferramenta intuitiva e conveniente para organizar suas compras individuais e em grupo, facilitando também a colaboração entre amigos e familiares.</p>
-            </section>
-            <section id="identidade-visual-cores">
-                <h2>Identidade Visual - Cores</h2>
-                <p>Definimos as cores a partir das emoções que desejamos transmitir aos usuários.</p>
-                <ul>
-                    <li>
-                        <ul>
-                            <li><img src="./images/azul-ardosia.png" alt="Cor Azul Árdósia"></li>
-                            <li>Azul Árdósia</li>
-                            <li>Inspiração</li>
-                            <li>Criatividade</li>
-                            <li>Estabilidade</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <ul>
-                            <li><img src="./images/azul-ceu.png" alt="Cor Azul Céu"></li>
-                            <li>Azul Céu</li>
-                            <li>Amizade</li>
-                            <li>Confiança</li>
-                            <li>Tranquilidade</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <ul>
-                            <li><img src="./images/alvacento.png" alt="Cor Alvacento"></li>
-                            <li>Alvacento</li>
-                            <li>Equilíbrio</li>
-                            <li>Elegância</li>
-                            <li>Sofisticação</li>
-                        </ul>
-                    </li>
-                </ul>
-            </section>
-            <section id="identidade-visual-logotipo">
-                <h2>Identidade Visual - Logotipo</h2>
-                <p>Para a composição do logotipo, utilizamos a fonte Kaushan Script  pela sua caligrafia elegante remetendo coisas escritas à mão.</p>
-                <img src="./images/logotipo.png" alt="Logotipo Make a List!">
-            </section>
-            <section id="identidade-visual-logomarca">
-                <h2>Identidade Visual - Logomarca</h2>
-                <p>Para logomarca, mantivemos o primeiro e o último elemento do logotipo.</p>
-                <img src="./images/logomarca.png" alt="Logomarca Make a List!">
-            </section>
-            <section id="identidade-visual-moodboard">
-                <h2>Identidade Visual - Moodboard</h2>
-                <img src="./images/moodboard.png" alt="Moodboard Make a List!">
-            </section>
-            <section id="prototipo">
-                <h2>Protótipo</h2>
-                <img src="./images/prototipo.png" alt="Protótipo Make a List!">
-            </section>
-            <section id="front-end">
-                <h2>Front-end</h2>
-                <p>Conteúdo da seção de front-end.</p>
-            </section>
-            <section id="back-end">
-                <h2>Back-end</h2>
-                <p>Conteúdo da seção de back-end.</p>
-            </section>
-            <section id="documentacao">
-                <h2>Documentação</h2>
-                <div id="documentacao-requisitos">
-                    <h3>Requisitos</h3>
-                    <div id="documentacao-requisitos-funcionais">
-                        <h4>Requisitos Funcionais</h4>
-                        <ul>
-                            <li>
-                                <h5>RF001 - Cadastro de Usuário</h5>
-                                <p><strong>Categoria: </strong><input aria-label="evidente" type="checkbox" checked disabled> Evidente <input aria-label="oculto" type="checkbox" disabled> Oculto</p>
-                                <p><strong>Prioridade: </strong><input aria-label="altissima" type="checkbox" checked disabled> Altíssima <input aria-label="alta" type="checkbox" disabled> Alta <input aria-label="media" type="checkbox" disabled> Média <input aria-label="baixa" type="checkbox" disabled> Baixa</p>
-                                <p><strong>Descrição: </strong>Os usuários podem se cadastrar na plataforma fornecendo informações como nome, e-mail e senha. Este requisito é evidente, pois é essencial para a funcionalidade básica do sistema e possui prioridade altíssima, já que sem ele os usuários não podem acessar a aplicação.</p>
-                            </li>
-                            <li>
-                                <h5>RF002 - Autenticação</h5>
-                                <p><strong>Categoria: </strong><input aria-label="evidente" type="checkbox" checked disabled> Evidente <input aria-label="oculto" type="checkbox" disabled> Oculto</p>
-                                <p><strong>Prioridade: </strong><input aria-label="altissima" type="checkbox" checked disabled> Altíssima <input aria-label="alta" type="checkbox" disabled> Alta <input aria-label="media" type="checkbox" disabled> Média <input aria-label="baixa" type="checkbox" disabled> Baixa</p>
-                                <p><strong>Descrição: </strong>Os usuários podem fazer login usando suas credenciais cadastradas. O sistema deve validar as credenciais do usuário para autenticá-lo. Este requisito também é evidente e possui prioridade altíssima, pois é crucial para garantir a segurança e o acesso controlado à plataforma.</p>
-                            </li>
-                            <li>
-                                <h5>RF003 - Criar Lista de Compras</h5>
-                                <p><strong>Categoria: </strong><input aria-label="evidente" type="checkbox" checked disabled> Evidente <input aria-label="oculto" type="checkbox" disabled> Oculto</p>
-                                <p><strong>Prioridade: </strong><input aria-label="altissima" type="checkbox" checked disabled> Altíssima <input aria-label="alta" type="checkbox" disabled> Alta <input aria-label="media" type="checkbox" disabled> Média <input aria-label="baixa" type="checkbox" disabled> Baixa</p>
-                                <p><strong>Descrição: </strong>Os usuários podem criar novas listas de compras, dando a elas um nome descritivo. Este requisito é evidente e altamente prioritário, pois é a funcionalidade central da aplicação.</p>
-                            </li>
-                            <li>
-                                <h5>RF004 - Adicionar Itens à Lista</h5>
-                                <p><strong>Categoria: </strong><input aria-label="evidente" type="checkbox" checked disabled> Evidente <input aria-label="oculto" type="checkbox" disabled> Oculto</p>
-                                <p><strong>Prioridade: </strong><input aria-label="altissima" type="checkbox" checked disabled> Altíssima <input aria-label="alta" type="checkbox" disabled> Alta <input aria-label="media" type="checkbox" disabled> Média <input aria-label="baixa" type="checkbox" disabled> Baixa</p>
-                                <p><strong>Descrição: </strong>Os usuários podem adicionar itens à lista de compras, incluindo nome, quantidade e categoria. Este requisito é evidente e altamente prioritário, pois permite que os usuários construam suas listas de compras.</p>
-                            </li>
-                            <li>
-                                <h5>RF005 - Definir Preços para Itens</h5>
-                                <p><strong>Categoria: </strong><input aria-label="evidente" type="checkbox" checked disabled> Evidente <input aria-label="oculto" type="checkbox" disabled> Oculto</p>
-                                <p><strong>Prioridade: </strong><input aria-label="altissima" type="checkbox" checked disabled> Altíssima <input aria-label="alta" type="checkbox" disabled> Alta <input aria-label="media" type="checkbox" disabled> Média <input aria-label="baixa" type="checkbox" disabled> Baixa</p>
-                                <p><strong>Descrição: </strong>Os usuários podem definir preços para os itens da lista. O sistema deve calcular automaticamente o custo total da lista com base nos preços definidos. Este requisito é evidente e altamente prioritário, pois é fundamental para o cálculo dos gastos.</p>
-                            </li>
-                            <li>
-                                <h5>RF006 - Listas Recorrentes</h5>
-                                <p><strong>Categoria: </strong><input aria-label="evidente" type="checkbox" checked disabled> Evidente <input aria-label="oculto" type="checkbox" disabled> Oculto</p>
-                                <p><strong>Prioridade: </strong><input aria-label="altissima" type="checkbox" disabled> Altíssima <input aria-label="alta" type="checkbox" checked disabled> Alta <input aria-label="media" type="checkbox" disabled> Média <input aria-label="baixa" type="checkbox" disabled> Baixa</p>
-                                <p><strong>Descrição: </strong>Os usuários podem marcar listas como recorrentes, indicando que são usadas para compras frequentes. Este requisito é evidente, embora sua prioridade seja alta, pois não é estritamente necessário, mas pode melhorar a experiência do usuário.</p>
-                            </li>
-                            <li>
-                                <h5>RF007 - Compartilhamento de Listas</h5>
-                                <p><strong>Categoria: </strong><input aria-label="evidente" type="checkbox" checked disabled> Evidente <input aria-label="oculto" type="checkbox" disabled> Oculto</p>
-                                <p><strong>Prioridade: </strong><input aria-label="altissima" type="checkbox" checked disabled> Altíssima <input aria-label="alta" type="checkbox" disabled> Alta <input aria-label="media" type="checkbox" disabled> Média <input aria-label="baixa" type="checkbox" disabled> Baixa</p>
-                                <p><strong>Descrição: </strong>Os usuários podem compartilhar suas listas com outros usuários por meio de convites via e-mail ou links. Os usuários compartilhados podem visualizar e editar a lista compartilhada. Este requisito é evidente e altamente prioritário, pois envolve recursos de colaboração.</p>
-                            </li>
-                            <li>
-                                <h5>RF008 - Criar Grupos de Listas</h5>
-                                <p><strong>Categoria: </strong><input aria-label="evidente" type="checkbox" checked disabled> Evidente <input aria-label="oculto" type="checkbox" disabled> Oculto</p>
-                                <p><strong>Prioridade: </strong><input aria-label="altissima" type="checkbox" disabled> Altíssima <input aria-label="alta" type="checkbox" checked disabled> Alta <input aria-label="media" type="checkbox" disabled> Média <input aria-label="baixa" type="checkbox" disabled> Baixa</p>
-                                <p><strong>Descrição: </strong>Os usuários podem criar grupos de listas, permitindo organizar várias listas relacionadas em um único conjunto. Cada grupo de listas pode ser compartilhado com outros usuários, dando acesso às listas contidas no grupo. Este requisito é evidente, mas sua prioridade é alta, pois é uma funcionalidade adicional que melhora a organização das listas de compras.</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div id="documentacao-requisitos-nao-funcionais">
-                        <h4>Requisitos Não Funcionais</h4>
-                        <ul>
-                            <li>
-                                <h5>RNF001 - Usabilidade</h5>
-                                <p><strong>Tipo: </strong><input aria-label="usabilidade" type="checkbox" checked disabled> Usabilidade <input aria-label="desempenho" type="checkbox" disabled> Desempenho <input aria-label="seguranca" type="checkbox" disabled> Segurança <input aria-label="compatibilidade" type="checkbox" disabled> Compatibilidade <input aria-label="escalabilidade" type="checkbox" disabled> Escalabilidade</p>
-                                <p><strong>Obrigatoriedade: </strong><input aria-label="obrigatorio" type="checkbox" checked disabled> Obrigatório <input aria-label="desejavel" type="checkbox" disabled> Desejável</p>
-                                <p><strong>Durabilidade: </strong><input aria-label="permanente" type="checkbox" checked disabled> Permanente <input aria-label="transitorio" type="checkbox" disabled> Transitório</p>
-                                <p><strong>Descrição: </strong>A interface da aplicação deve ser intuitiva e de fácil utilização para garantir uma experiência positiva do usuário. As ações devem ser claras e autoexplicativas. Este requisito de usabilidade é obrigatório e permanente, pois é fundamental para a satisfação dos usuários a longo prazo.</p>
-                            </li>
-                            <li>
-                                <h5>RNF002 - Desempenho</h5>
-                                <p><strong>Tipo: </strong><input aria-label="usabilidade" type="checkbox" disabled> Usabilidade <input aria-label="desempenho" type="checkbox" checked disabled> Desempenho <input aria-label="seguranca" type="checkbox" disabled> Segurança <input aria-label="compatibilidade" type="checkbox" disabled> Compatibilidade <input aria-label="escalabilidade" type="checkbox" disabled> Escalabilidade</p>
-                                <p><strong>Obrigatoriedade: </strong><input aria-label="obrigatorio" type="checkbox" checked disabled> Obrigatório <input aria-label="desejavel" type="checkbox" disabled> Desejável</p>
-                                <p><strong>Durabilidade: </strong><input aria-label="permanente" type="checkbox" checked disabled> Permanente <input aria-label="transitorio" type="checkbox" disabled> Transitório</p>
-                                <p><strong>Descrição: </strong>A aplicação deve responder de forma rápida e eficiente, mesmo com um grande número de itens ou listas cadastradas. Este requisito de desempenho é obrigatório e permanente, garantindo que a aplicação seja responsiva em todas as situações.</p>
-                            </li>
-                            <li>
-                                <h5>RNF003 - Segurança</h5>
-                                <p><strong>Tipo: </strong><input aria-label="usabilidade" type="checkbox" disabled> Usabilidade <input aria-label="desempenho" type="checkbox" disabled> Desempenho <input aria-label="seguranca" type="checkbox" checked disabled> Segurança <input aria-label="compatibilidade" type="checkbox" disabled> Compatibilidade <input aria-label="escalabilidade" type="checkbox" disabled> Escalabilidade</p>
-                                <p><strong>Obrigatoriedade: </strong><input aria-label="obrigatorio" type="checkbox" checked disabled> Obrigatório <input aria-label="desejavel" type="checkbox" disabled> Desejável</p>
-                                <p><strong>Durabilidade: </strong><input aria-label="permanente" type="checkbox" checked disabled> Permanente <input aria-label="transitorio" type="checkbox" disabled> Transitório</p>
-                                <p><strong>Descrição: </strong>As senhas dos usuários devem ser armazenadas de maneira segura e protegidas por hash. As informações pessoais dos usuários não devem ser acessíveis por outros usuários. Este requisito de segurança é obrigatório e permanente, garantindo a proteção das informações dos usuários.</p>
-                            </li>
-                            <li>
-                                <h5>RNF004 - Compatibilidade com Dispositivos</h5>
-                                <p><strong>Tipo: </strong><input aria-label="usabilidade" type="checkbox" disabled> Usabilidade <input aria-label="desempenho" type="checkbox" disabled> Desempenho <input aria-label="seguranca" type="checkbox" disabled> Segurança <input aria-label="compatibilidade" type="checkbox" checked disabled> Compatibilidade <input aria-label="escalabilidade" type="checkbox" disabled> Escalabilidade</p>
-                                <p><strong>Obrigatoriedade: </strong><input aria-label="obrigatorio" type="checkbox" checked disabled> Obrigatório <input aria-label="desejavel" type="checkbox" disabled> Desejável</p>
-                                <p><strong>Durabilidade: </strong><input aria-label="permanente" type="checkbox" checked disabled> Permanente <input aria-label="transitorio" type="checkbox" disabled> Transitório</p>
-                                <p><strong>Descrição: </strong>A aplicação deve ser responsiva e funcionar adequadamente em dispositivos móveis e desktops. Este requisito de compatibilidade com dispositivos é obrigatório e permanente, garantindo que os usuários possam acessar a aplicação de diferentes dispositivos.</p>
-                            </li>
-                            <li>
-                                <h5>RNF005 - Escalabilidade</h5>
-                                <p><strong>Tipo: </strong><input aria-label="usabilidade" type="checkbox" disabled> Usabilidade <input aria-label="desempenho" type="checkbox" disabled> Desempenho <input aria-label="seguranca" type="checkbox" disabled> Segurança <input aria-label="compatibilidade" type="checkbox" disabled> Compatibilidade <input aria-label="escalabilidade" type="checkbox" checked disabled> Escalabilidade</p>
-                                <p><strong>Obrigatoriedade: </strong><input aria-label="obrigatorio" type="checkbox" checked disabled> Obrigatório <input aria-label="desejavel" type="checkbox" disabled> Desejável</p>
-                                <p><strong>Durabilidade: </strong><input aria-label="permanente" type="checkbox" checked disabled> Permanente <input aria-label="transitorio" type="checkbox" disabled> Transitório</p>
-                                <p><strong>Descrição: </strong>O sistema deve ser projetado para lidar com um aumento gradual de usuários e dados. Este requisito de escalabilidade é obrigatório e permanente, assegurando que a aplicação possa crescer de forma sustentável com o aumento da demanda.</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div id="documentacao-casos-uso">
-                    <h3>Casos de Uso</h3>
-                    <ul>
-                        <li>
-                            <h5>UC001 - Cadastro de Usuário</h5>
-                            <p><strong>Descrição: </strong>O usuário cria uma conta na plataforma para acessar as funcionalidades.</p>
-                            <p><strong>Ator Primário: </strong>Usuário</p>
-                            <p><strong>Pré-Condição: </strong>O usuário não possui uma conta.</p>
-                            <p><strong>Cenário Principal:</strong></p>
-                            <ol>
-                                <li>O usuário seleciona a opção de criar conta.</li>
-                                <li>O usuário fornece seu nome, e-mail e senha.</li>
-                                <li>O sistema valida as informações e cria a conta do usuário.</li>
-                            </ol>
-                            <p><strong>Pós-Condição: </strong>O usuário tem uma conta criada e pode fazer login.</p>
-                        </li>
-                        <li>
-                            <h5>UC002 - Autenticação</h5>
-                            <p><strong>Descrição: </strong>O usuário faz login na plataforma usando suas credenciais.</p>
-                            <p><strong>Ator Primário: </strong>Usuário</p>
-                            <p><strong>Pré-Condição: </strong>O usuário possui uma conta.</p>
-                            <p><strong>Cenário Principal:</strong></p>
-                            <ol>
-                                <li>O usuário insere seu e-mail e senha.</li>
-                                <li>O sistema valida as credenciais do usuário.</li>
-                                <li>O usuário é redirecionado para a página principal da aplicação.</li>
-                            </ol>
-                            <p><strong>Pós-Condição: </strong>O usuário está autenticado na plataforma.</p>
-                        </li>
-                        <li>
-                            <h5>UC003 - Criar Lista de Compras</h5>
-                            <p><strong>Descrição: </strong>O usuário cria uma nova lista de compras.</p>
-                            <p><strong>Ator Primário: </strong>Usuário</p>
-                            <p><strong>Pré-Condição: </strong>O usuário está autenticado na plataforma.</p>
-                            <p><strong>Cenário Principal:</strong></p>
-                            <ol>
-                                <li>O usuário acessa a página de criação de listas.</li>
-                                <li>O usuário escolhe um nome, ícone e cor para a lista.</li>
-                                <li>O sistema cria uma lista vazia.</li>
-                            </ol>
-                            <p><strong>Cenário Alternativo:</strong></p>
-                            <ol>
-                                <li>O usuário acessa a página de criação de listas.</li>
-                                <li>O usuário cria uma lista a partir de um modelo.</li>
-                                <li>O sistema cria uma lista a partir do modelo selecionado.</li>
-                            </ol>
-                            <p><strong>Pós-Condição: </strong>Uma nova lista de compras é criada.</p>
-                        </li>
-                        <li>
-                            <h5>UC004 - Adicionar Itens à Lista</h5>
-                            <p><strong>Descrição: </strong>O usuário adiciona itens à sua lista de compras.</p>
-                            <p><strong>Ator Primário: </strong>Usuário</p>
-                            <p><strong>Pré-Condição: </strong>O usuário possui uma lista de compras.</p>
-                            <p><strong>Cenário Principal:</strong></p>
-                            <ol>
-                                <li>O usuário seleciona a lista em que deseja adicionar itens.</li>
-                                <li>O usuário insere o nome, quantidade, preço e categoria do item.</li>
-                                <li>O sistema adiciona o item à lista.</li>
-                            </ol>
-                            <p><strong>Pós-Condição: </strong>O item é adicionado à lista de compras.</p>
-                        </li>
-                        <li>
-                            <h5>UC005 - Criar Modelo de Lista de Compras</h5>
-                            <p><strong>Descrição: </strong>O usuário cria uma lista de compras padrão para reutilização.</p>
-                            <p><strong>Ator Primário: </strong>Usuário</p>
-                            <p><strong>Pré-Condição: </strong>O usuário está autenticado na plataforma e possui uma lista criada.</p>
-                            <p><strong>Cenário Principal:</strong></p>
-                            <ol>
-                                <li>O usuário acessa a lista criada.</li>
-                                <li>O usuário marca a lista como modelo.</li>
-                            </ol>
-                            <p><strong>Pós-Condição: </strong>Um novo modelo de lista de compras é criado.</p>
-                        </li>
-                        <li>
-                            <h5>UC006 - Editar Itens da Lista</h5>
-                            <p><strong>Descrição: </strong>O usuário edita informações de itens da lista de compras.</p>
-                            <p><strong>Ator Primário: </strong>Usuário</p>
-                            <p><strong>Pré-Condição: </strong>O usuário possui uma lista de compras com itens.</p>
-                            <p><strong>Cenário Principal:</strong></p>
-                            <ol>
-                                <li>O usuário seleciona a lista com itens a serem editados.</li>
-                                <li>O usuário pode editar as informações (nome, categoria, quantidade, preço) e/ou excluir itens da lista.</li>
-                                <li>O sistema atualiza as informações dos itens.</li>
-                            </ol>
-                            <p><strong>Pós-Condição: </strong>Os itens são atualizados e o custo total é recalculado.</p>
-                        </li>
-                        <li>
-                            <h5>UC007 - Criar Grupos de Listas</h5>
-                            <p><strong>Descrição: </strong>O usuário cria grupos para organizar listas relacionadas.</p>
-                            <p><strong>Ator Primário: </strong>Usuário</p>
-                            <p><strong>Pré-Condição: </strong>O usuário está autenticado na plataforma.</p>
-                            <p><strong>Cenário Principal:</strong></p>
-                            <ol>
-                                <li>O usuário acessa a página de criação de grupos.</li>
-                                <li>O usuário escolhe um nome, ícone e cor para o grupo.</li>
-                                <li>O usuário pode a partir de agora, criar listas dentro do grupo.</li>
-                            </ol>
-                            <p><strong>Pós-Condição: </strong>Um novo grupo de listas é criado.</p>
-                        </li>
-                        <li>
-                            <h5>UC008 - Compartilhar Listas e/ou Grupos de Listas</h5>
-                            <p><strong>Descrição: </strong>O usuário compartilha listas e/ou grupos de listas com outros usuários.</p>
-                            <p><strong>Ator Primário: </strong>Usuário</p>
-                            <p><strong>Pré-Condição: </strong>O usuário possui listas e/ou grupos de listas criados.</p>
-                            <p><strong>Cenário Principal:</strong></p>
-                            <ol>
-                                <li>O usuário seleciona a lista e/ou o grupo de listas que deseja compartilhar.</li>
-                                <li>O usuário insere os e-mails dos destinatários.</li>
-                                <li>O sistema automaticamente adiciona o usuário à lista e/ou ao grupo de listas.</li>
-                            </ol>
-                            <p><strong>Pós-Condição: </strong>Os destinatários têm acesso à lista e/ou ao grupo de listas compartilhado e podem visualizar e editar as listas nele contidas, ou sair do compartilhamento.</p>
-                        </li>
-                        <li>
-                            <h5>UC009 - Arquivar Lista de Compras e ou Grupo de Listas</h5>
-                            <p><strong>Descrição: </strong>O usuário arquiva uma lista de compras e/ou um grupo de listas existente.</p>
-                            <p><strong>Ator Primário: </strong>Usuário</p>
-                            <p><strong>Pré-Condição: </strong>O usuário possui uma lista de compras e/ou um grupo de listas criado.</p>
-                            <p><strong>Cenário Principal:</strong></p>
-                            <ol>
-                                <li>O usuário seleciona a lista de compras e/ou um grupo de listas que deseja arquivar.</li>
-                                <li>O sistema marca a lista de compras e/ou um grupo de listas como arquivado.</li>
-                            </ol>
-                            <p><strong>Pós-Condição: </strong>A lista de compras e/ou um grupo de listas é movido para o arquivo.</p>
-                        </li>
-                        <li>
-                            <h5>UC010 - Excluir Lista de Compras e ou Grupo de Listas</h5>
-                            <p><strong>Descrição: </strong>O usuário exclui uma lista de compras e/ou um grupo de listas existente.</p>
-                            <p><strong>Ator Primário: </strong>Usuário</p>
-                            <p><strong>Pré-Condição: </strong>O usuário possui uma lista de compras e/ou um grupo de listas criado.</p>
-                            <p><strong>Cenário Principal:</strong></p>
-                            <ol>
-                                <li>O usuário seleciona a lista de compras e/ou um grupo de listas que deseja excluir.</li>
-                                <li>O usuário confirma a exclusão da lista e/ou do grupo de listas.</li>
-                                <li>O sistema envia para a lixeira a lista de compras e/ou um grupo de listas do sistema.</li>
-                                <li>Após 7 dias, o sistema remove permanentemente os itens adicionados à lixeira.</li>
-                            </ol>
-                            <p><strong>Pós-Condição: </strong>A lista de compras e/ou um grupo de listas é excluído do sistema.</p>
-                        </li>
-                        <li>
-                            <h5>UC011 - Remover o Compartilhamento de um Usuário de uma Lista e/ou Grupo de Listas</h5>
-                            <p><strong>Descrição: </strong>O usuário remove um membro de uma lista e/ou um grupo de listas.</p>
-                            <p><strong>Ator Primário: </strong>Usuário</p>
-                            <p><strong>Pré-Condição: </strong>O usuário é membro de uma lista e/ou um grupo de listas.</p>
-                            <p><strong>Cenário Principal:</strong></p>
-                            <ol>
-                                <li>O usuário acessa a página de gerenciamento de compartilhamento da lista ou do grupo.</li>
-                                <li>O usuário seleciona o membro que deseja remover.</li>
-                                <li>O usuário confirma a remoção do membro.</li>
-                                <li>O sistema remove o membro da lista e/ou do grupo de listas.</li>
-                            </ol>
-                            <p><strong>Pós-Condição: </strong>O membro é removido do compartilhamento.</p>
-                        </li>
-                    </ul>
-                </div>
-                <div id="documentacao-bpmn">
-                    <h3>BPMN (Business Process Model and Notation)</h3>
-                    <ul>
-                        <li>
-                            <h4>Acesso ao sistema</h4>
-                            <img src="./images/bpmn-acesso_ao_sistema.svg" alt="BPMN - Acesso ao sistema">
-                        </li>
-                        <li>
-                            <h4>Criar listas e/ou grupos de listas de compras</h4>
-                            <img src="./images/bpmn-criar_listas.svg" alt="BPMN - Criar listas e/ou grupos de listas de compras">
-                        </li>
-                        <li>
-                            <h4>Ações possíveis em uma lista</h4>
-                            <img src="./images/bpmn-acoes_possiveis.svg" alt="BPMN - Ações possíveis em uma lista">
-                        </li>
-                        <li>
-                            <h4>Editar itens da lista</h4>
-                            <img src="./images/bpmn-editar_itens.svg" alt="BPMN - Editar itens da lista">
-                        </li>
-                        <li>
-                            <h4>Compartilhamento de listas e/ou grupos de listas de compras</h4>
-                            <img src="./images/bpmn-compartilhamento.svg" alt="BPMN - Compartilhamento de listas e/ou grupos de listas de compras">
-                        </li>
-                    </ul>
-                </div>
-            </section>
+      <div class="left">
+        <a class="btn" href="#apresentacao"><h1>Make a List!</h1></a>
+        <a class="btn" href="#apresentacao">Apresentação</a>
+        <a class="btn" href="#identidade-visual-cores">Identidade Visual</a>
+        <a class="btn" href="#prototipo">Protótipo</a>
+        <a class="btn" href="#front-end">Front-end</a>
+        <a class="btn" href="#back-end">Back-end</a>
+        <a class="btn" href="#documentacao">Documentação</a>
+      </div>
+      <div class="right">
+        <section id="apresentacao">
+          <h2>Apresentação</h2>
+          <p>
+            Este projeto é parte do curso de Desenvolvimento de Software
+            Multiplataforma do 3º semestre da Faculdade de Tecnologia de Franca
+            (Fatec). O projeto abrange as seguintes disciplinas:
+          </p>
+          <ul>
+            <li>
+              <strong>Gestão Ágil de Projetos e Softwares: </strong>Aplicação de
+              metodologias ágeis para o desenvolvimento do projeto.
+            </li>
+            <li>
+              <strong>Banco de Dados Não Relacional: </strong>Implementação do
+              banco de dados MongoDB integração com back-end.
+            </li>
+            <li>
+              <strong>Desenvolvimento Web III: </strong>Criação da interface e
+              desenvolvimento front-end e back-end da aplicação.
+            </li>
+            <li>
+              <strong>Interação Humano Computador: </strong>Consideração de
+              usabilidade e experiência do usuário na interface.
+            </li>
+          </ul>
+        </section>
+        <section id="equipe">
+          <h2>Equipe</h2>
+          <p>
+            A equipe do projeto "Make a List!" é composta por membros do 3
+            semestre do curso de Desenvolvimento de Software Multiplataforma,
+            cada um responsabilidades principais no projeto, mas também com
+            participação geral de todos na tomada de decisões e no projeto de
+            uma forma geral.
+          </p>
+          <ul>
+            <li>
+              Eduarda Matos (Líder): Pesquisa de mercado, identidade visual,
+              protótipo, testes de qualidade e usabilidade.
+            </li>
+            <li>Gabriel Imenes: Front-end e documentação auxiliares.</li>
+            <li>Igor Achette: Front-end principal.</li>
+            <li>
+              João Paulo Falcuci: Documentação detalhada, testes de qualidade e
+              usabilidade.
+            </li>
+            <li>Raul Araújo: Back-end da aplicação e banco de dados.</li>
+          </ul>
+        </section>
+        <section id="sobre-o-projeto">
+          <h2>Sobre o Projeto</h2>
+          <p>
+            A aplicação "Make a List!" é uma plataforma web projetada para
+            simplificar a criação e o compartilhamento de listas de compras de
+            supermercado e outros itens essenciais. A proposta é oferecer aos
+            usuários uma ferramenta intuitiva e conveniente para organizar suas
+            compras individuais e em grupo, facilitando também a colaboração
+            entre amigos e familiares.
+          </p>
+        </section>
+        <section id="identidade-visual-cores">
+          <h2>Identidade Visual - Cores</h2>
+          <p>
+            Definimos as cores a partir das emoções que desejamos transmitir aos
+            usuários.
+          </p>
+          <div id="identidade-container">
+            <ul>
+              <li>
+                <img src="./images/azul-ardosia.png" alt="Cor Azul Árdósia" />
+              </li>
+              <li>Azul Árdósia</li>
+              <li>Inspiração</li>
+              <li>Criatividade</li>
+              <li>Estabilidade</li>
+            </ul>
+
+            <ul>
+              <li><img src="./images/azul-ceu.png" alt="Cor Azul Céu" /></li>
+              <li>Azul Céu</li>
+              <li>Amizade</li>
+              <li>Confiança</li>
+              <li>Tranquilidade</li>
+            </ul>
+
+            <ul>
+              <li>
+                <img src="./images/alvacento.png" alt="Cor Alvacento" />
+              </li>
+              <li>Alvacento</li>
+              <li>Equilíbrio</li>
+              <li>Elegância</li>
+              <li>Sofisticação</li>
+            </ul>
           </div>
+        </section>
+        <section id="identidade-visual-logotipo">
+          <h2>Identidade Visual - Logotipo</h2>
+          <p>
+            Para a composição do logotipo, utilizamos a fonte Kaushan Script
+            pela sua caligrafia elegante remetendo coisas escritas à mão.
+          </p>
+          <img src="./images/logotipo.png" alt="Logotipo Make a List!" />
+        </section>
+        <section id="identidade-visual-logomarca">
+          <h2>Identidade Visual - Logomarca</h2>
+          <p>
+            Para logomarca, mantivemos o primeiro e o último elemento do
+            logotipo.
+          </p>
+          <img src="./images/logomarca.png" alt="Logomarca Make a List!" />
+        </section>
+        <section id="identidade-visual-moodboard">
+          <h2>Identidade Visual - Moodboard</h2>
+          <img src="./images/moodboard.png" alt="Moodboard Make a List!" />
+        </section>
+        <section id="prototipo">
+          <h2>Protótipo</h2>
+          <img src="./images/prototipo.png" alt="Protótipo Make a List!" />
+        </section>
+        <section id="front-end">
+          <h2>Front-end</h2>
+          <p>Conteúdo da seção de front-end.</p>
+        </section>
+        <section id="back-end">
+          <h2>Back-end</h2>
+          <p>Conteúdo da seção de back-end.</p>
+        </section>
+        <section id="documentacao">
+          <h2>Documentação - Requisitos e Casos de Uso</h2>
+          <div id="documentacao-requisitos">
+            <div id="documentacao-requisitos-funcionais">
+              <h4 id="requisitos-funcionais-heading">Requisitos Funcionais:</h4>
+              <!-- DIV abaixo criada via JS -->
+              <div id="requisitos-funcionais"></div>
+            </div>
+            <div id="documentacao-requisitos-nao-funcionais">
+              <h4>Requisitos Não Funcionais</h4>
+              <ul>
+                <li>
+                  <h5>RNF001 - Usabilidade</h5>
+                  <p>
+                    <strong>Tipo: </strong
+                    ><input
+                      aria-label="usabilidade"
+                      type="checkbox"
+                      checked
+                      disabled
+                    />
+                    Usabilidade
+                    <input aria-label="desempenho" type="checkbox" disabled />
+                    Desempenho
+                    <input aria-label="seguranca" type="checkbox" disabled />
+                    Segurança
+                    <input
+                      aria-label="compatibilidade"
+                      type="checkbox"
+                      disabled
+                    />
+                    Compatibilidade
+                    <input
+                      aria-label="escalabilidade"
+                      type="checkbox"
+                      disabled
+                    />
+                    Escalabilidade
+                  </p>
+                  <p>
+                    <strong>Obrigatoriedade: </strong
+                    ><input
+                      aria-label="obrigatorio"
+                      type="checkbox"
+                      checked
+                      disabled
+                    />
+                    Obrigatório
+                    <input aria-label="desejavel" type="checkbox" disabled />
+                    Desejável
+                  </p>
+                  <p>
+                    <strong>Durabilidade: </strong
+                    ><input
+                      aria-label="permanente"
+                      type="checkbox"
+                      checked
+                      disabled
+                    />
+                    Permanente
+                    <input aria-label="transitorio" type="checkbox" disabled />
+                    Transitório
+                  </p>
+                  <p>
+                    <strong>Descrição: </strong>A interface da aplicação deve
+                    ser intuitiva e de fácil utilização para garantir uma
+                    experiência positiva do usuário. As ações devem ser claras e
+                    autoexplicativas. Este requisito de usabilidade é
+                    obrigatório e permanente, pois é fundamental para a
+                    satisfação dos usuários a longo prazo.
+                  </p>
+                </li>
+                <li>
+                  <h5>RNF002 - Desempenho</h5>
+                  <p>
+                    <strong>Tipo: </strong
+                    ><input aria-label="usabilidade" type="checkbox" disabled />
+                    Usabilidade
+                    <input
+                      aria-label="desempenho"
+                      type="checkbox"
+                      checked
+                      disabled
+                    />
+                    Desempenho
+                    <input aria-label="seguranca" type="checkbox" disabled />
+                    Segurança
+                    <input
+                      aria-label="compatibilidade"
+                      type="checkbox"
+                      disabled
+                    />
+                    Compatibilidade
+                    <input
+                      aria-label="escalabilidade"
+                      type="checkbox"
+                      disabled
+                    />
+                    Escalabilidade
+                  </p>
+                  <p>
+                    <strong>Obrigatoriedade: </strong
+                    ><input
+                      aria-label="obrigatorio"
+                      type="checkbox"
+                      checked
+                      disabled
+                    />
+                    Obrigatório
+                    <input aria-label="desejavel" type="checkbox" disabled />
+                    Desejável
+                  </p>
+                  <p>
+                    <strong>Durabilidade: </strong
+                    ><input
+                      aria-label="permanente"
+                      type="checkbox"
+                      checked
+                      disabled
+                    />
+                    Permanente
+                    <input aria-label="transitorio" type="checkbox" disabled />
+                    Transitório
+                  </p>
+                  <p>
+                    <strong>Descrição: </strong>A aplicação deve responder de
+                    forma rápida e eficiente, mesmo com um grande número de
+                    itens ou listas cadastradas. Este requisito de desempenho é
+                    obrigatório e permanente, garantindo que a aplicação seja
+                    responsiva em todas as situações.
+                  </p>
+                </li>
+                <li>
+                  <h5>RNF003 - Segurança</h5>
+                  <p>
+                    <strong>Tipo: </strong
+                    ><input aria-label="usabilidade" type="checkbox" disabled />
+                    Usabilidade
+                    <input aria-label="desempenho" type="checkbox" disabled />
+                    Desempenho
+                    <input
+                      aria-label="seguranca"
+                      type="checkbox"
+                      checked
+                      disabled
+                    />
+                    Segurança
+                    <input
+                      aria-label="compatibilidade"
+                      type="checkbox"
+                      disabled
+                    />
+                    Compatibilidade
+                    <input
+                      aria-label="escalabilidade"
+                      type="checkbox"
+                      disabled
+                    />
+                    Escalabilidade
+                  </p>
+                  <p>
+                    <strong>Obrigatoriedade: </strong
+                    ><input
+                      aria-label="obrigatorio"
+                      type="checkbox"
+                      checked
+                      disabled
+                    />
+                    Obrigatório
+                    <input aria-label="desejavel" type="checkbox" disabled />
+                    Desejável
+                  </p>
+                  <p>
+                    <strong>Durabilidade: </strong
+                    ><input
+                      aria-label="permanente"
+                      type="checkbox"
+                      checked
+                      disabled
+                    />
+                    Permanente
+                    <input aria-label="transitorio" type="checkbox" disabled />
+                    Transitório
+                  </p>
+                  <p>
+                    <strong>Descrição: </strong>As senhas dos usuários devem ser
+                    armazenadas de maneira segura e protegidas por hash. As
+                    informações pessoais dos usuários não devem ser acessíveis
+                    por outros usuários. Este requisito de segurança é
+                    obrigatório e permanente, garantindo a proteção das
+                    informações dos usuários.
+                  </p>
+                </li>
+                <li>
+                  <h5>RNF004 - Compatibilidade com Dispositivos</h5>
+                  <p>
+                    <strong>Tipo: </strong
+                    ><input aria-label="usabilidade" type="checkbox" disabled />
+                    Usabilidade
+                    <input aria-label="desempenho" type="checkbox" disabled />
+                    Desempenho
+                    <input aria-label="seguranca" type="checkbox" disabled />
+                    Segurança
+                    <input
+                      aria-label="compatibilidade"
+                      type="checkbox"
+                      checked
+                      disabled
+                    />
+                    Compatibilidade
+                    <input
+                      aria-label="escalabilidade"
+                      type="checkbox"
+                      disabled
+                    />
+                    Escalabilidade
+                  </p>
+                  <p>
+                    <strong>Obrigatoriedade: </strong
+                    ><input
+                      aria-label="obrigatorio"
+                      type="checkbox"
+                      checked
+                      disabled
+                    />
+                    Obrigatório
+                    <input aria-label="desejavel" type="checkbox" disabled />
+                    Desejável
+                  </p>
+                  <p>
+                    <strong>Durabilidade: </strong
+                    ><input
+                      aria-label="permanente"
+                      type="checkbox"
+                      checked
+                      disabled
+                    />
+                    Permanente
+                    <input aria-label="transitorio" type="checkbox" disabled />
+                    Transitório
+                  </p>
+                  <p>
+                    <strong>Descrição: </strong>A aplicação deve ser responsiva
+                    e funcionar adequadamente em dispositivos móveis e desktops.
+                    Este requisito de compatibilidade com dispositivos é
+                    obrigatório e permanente, garantindo que os usuários possam
+                    acessar a aplicação de diferentes dispositivos.
+                  </p>
+                </li>
+                <li>
+                  <h5>RNF005 - Escalabilidade</h5>
+                  <p>
+                    <strong>Tipo: </strong
+                    ><input aria-label="usabilidade" type="checkbox" disabled />
+                    Usabilidade
+                    <input aria-label="desempenho" type="checkbox" disabled />
+                    Desempenho
+                    <input aria-label="seguranca" type="checkbox" disabled />
+                    Segurança
+                    <input
+                      aria-label="compatibilidade"
+                      type="checkbox"
+                      disabled
+                    />
+                    Compatibilidade
+                    <input
+                      aria-label="escalabilidade"
+                      type="checkbox"
+                      checked
+                      disabled
+                    />
+                    Escalabilidade
+                  </p>
+                  <p>
+                    <strong>Obrigatoriedade: </strong
+                    ><input
+                      aria-label="obrigatorio"
+                      type="checkbox"
+                      checked
+                      disabled
+                    />
+                    Obrigatório
+                    <input aria-label="desejavel" type="checkbox" disabled />
+                    Desejável
+                  </p>
+                  <p>
+                    <strong>Durabilidade: </strong
+                    ><input
+                      aria-label="permanente"
+                      type="checkbox"
+                      checked
+                      disabled
+                    />
+                    Permanente
+                    <input aria-label="transitorio" type="checkbox" disabled />
+                    Transitório
+                  </p>
+                  <p>
+                    <strong>Descrição: </strong>O sistema deve ser projetado
+                    para lidar com um aumento gradual de usuários e dados. Este
+                    requisito de escalabilidade é obrigatório e permanente,
+                    assegurando que a aplicação possa crescer de forma
+                    sustentável com o aumento da demanda.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div id="documentacao-casos-uso">
+            <h3>Casos de Uso</h3>
+            <ul>
+              <li>
+                <h5>UC001 - Cadastro de Usuário</h5>
+                <p>
+                  <strong>Descrição: </strong>O usuário cria uma conta na
+                  plataforma para acessar as funcionalidades.
+                </p>
+                <p><strong>Ator Primário: </strong>Usuário</p>
+                <p>
+                  <strong>Pré-Condição: </strong>O usuário não possui uma conta.
+                </p>
+                <p><strong>Cenário Principal:</strong></p>
+                <ol>
+                  <li>O usuário seleciona a opção de criar conta.</li>
+                  <li>O usuário fornece seu nome, e-mail e senha.</li>
+                  <li>
+                    O sistema valida as informações e cria a conta do usuário.
+                  </li>
+                </ol>
+                <p>
+                  <strong>Pós-Condição: </strong>O usuário tem uma conta criada
+                  e pode fazer login.
+                </p>
+              </li>
+              <li>
+                <h5>UC002 - Autenticação</h5>
+                <p>
+                  <strong>Descrição: </strong>O usuário faz login na plataforma
+                  usando suas credenciais.
+                </p>
+                <p><strong>Ator Primário: </strong>Usuário</p>
+                <p>
+                  <strong>Pré-Condição: </strong>O usuário possui uma conta.
+                </p>
+                <p><strong>Cenário Principal:</strong></p>
+                <ol>
+                  <li>O usuário insere seu e-mail e senha.</li>
+                  <li>O sistema valida as credenciais do usuário.</li>
+                  <li>
+                    O usuário é redirecionado para a página principal da
+                    aplicação.
+                  </li>
+                </ol>
+                <p>
+                  <strong>Pós-Condição: </strong>O usuário está autenticado na
+                  plataforma.
+                </p>
+              </li>
+              <li>
+                <h5>UC003 - Criar Lista de Compras</h5>
+                <p>
+                  <strong>Descrição: </strong>O usuário cria uma nova lista de
+                  compras.
+                </p>
+                <p><strong>Ator Primário: </strong>Usuário</p>
+                <p>
+                  <strong>Pré-Condição: </strong>O usuário está autenticado na
+                  plataforma.
+                </p>
+                <p><strong>Cenário Principal:</strong></p>
+                <ol>
+                  <li>O usuário acessa a página de criação de listas.</li>
+                  <li>O usuário escolhe um nome, ícone e cor para a lista.</li>
+                  <li>O sistema cria uma lista vazia.</li>
+                </ol>
+                <p><strong>Cenário Alternativo:</strong></p>
+                <ol>
+                  <li>O usuário acessa a página de criação de listas.</li>
+                  <li>O usuário cria uma lista a partir de um modelo.</li>
+                  <li>
+                    O sistema cria uma lista a partir do modelo selecionado.
+                  </li>
+                </ol>
+                <p>
+                  <strong>Pós-Condição: </strong>Uma nova lista de compras é
+                  criada.
+                </p>
+              </li>
+              <li>
+                <h5>UC004 - Adicionar Itens à Lista</h5>
+                <p>
+                  <strong>Descrição: </strong>O usuário adiciona itens à sua
+                  lista de compras.
+                </p>
+                <p><strong>Ator Primário: </strong>Usuário</p>
+                <p>
+                  <strong>Pré-Condição: </strong>O usuário possui uma lista de
+                  compras.
+                </p>
+                <p><strong>Cenário Principal:</strong></p>
+                <ol>
+                  <li>
+                    O usuário seleciona a lista em que deseja adicionar itens.
+                  </li>
+                  <li>
+                    O usuário insere o nome, quantidade, preço e categoria do
+                    item.
+                  </li>
+                  <li>O sistema adiciona o item à lista.</li>
+                </ol>
+                <p>
+                  <strong>Pós-Condição: </strong>O item é adicionado à lista de
+                  compras.
+                </p>
+              </li>
+              <li>
+                <h5>UC005 - Criar Modelo de Lista de Compras</h5>
+                <p>
+                  <strong>Descrição: </strong>O usuário cria uma lista de
+                  compras padrão para reutilização.
+                </p>
+                <p><strong>Ator Primário: </strong>Usuário</p>
+                <p>
+                  <strong>Pré-Condição: </strong>O usuário está autenticado na
+                  plataforma e possui uma lista criada.
+                </p>
+                <p><strong>Cenário Principal:</strong></p>
+                <ol>
+                  <li>O usuário acessa a lista criada.</li>
+                  <li>O usuário marca a lista como modelo.</li>
+                </ol>
+                <p>
+                  <strong>Pós-Condição: </strong>Um novo modelo de lista de
+                  compras é criado.
+                </p>
+              </li>
+              <li>
+                <h5>UC006 - Editar Itens da Lista</h5>
+                <p>
+                  <strong>Descrição: </strong>O usuário edita informações de
+                  itens da lista de compras.
+                </p>
+                <p><strong>Ator Primário: </strong>Usuário</p>
+                <p>
+                  <strong>Pré-Condição: </strong>O usuário possui uma lista de
+                  compras com itens.
+                </p>
+                <p><strong>Cenário Principal:</strong></p>
+                <ol>
+                  <li>
+                    O usuário seleciona a lista com itens a serem editados.
+                  </li>
+                  <li>
+                    O usuário pode editar as informações (nome, categoria,
+                    quantidade, preço) e/ou excluir itens da lista.
+                  </li>
+                  <li>O sistema atualiza as informações dos itens.</li>
+                </ol>
+                <p>
+                  <strong>Pós-Condição: </strong>Os itens são atualizados e o
+                  custo total é recalculado.
+                </p>
+              </li>
+              <li>
+                <h5>UC007 - Criar Grupos de Listas</h5>
+                <p>
+                  <strong>Descrição: </strong>O usuário cria grupos para
+                  organizar listas relacionadas.
+                </p>
+                <p><strong>Ator Primário: </strong>Usuário</p>
+                <p>
+                  <strong>Pré-Condição: </strong>O usuário está autenticado na
+                  plataforma.
+                </p>
+                <p><strong>Cenário Principal:</strong></p>
+                <ol>
+                  <li>O usuário acessa a página de criação de grupos.</li>
+                  <li>O usuário escolhe um nome, ícone e cor para o grupo.</li>
+                  <li>
+                    O usuário pode a partir de agora, criar listas dentro do
+                    grupo.
+                  </li>
+                </ol>
+                <p>
+                  <strong>Pós-Condição: </strong>Um novo grupo de listas é
+                  criado.
+                </p>
+              </li>
+              <li>
+                <h5>UC008 - Compartilhar Listas e/ou Grupos de Listas</h5>
+                <p>
+                  <strong>Descrição: </strong>O usuário compartilha listas e/ou
+                  grupos de listas com outros usuários.
+                </p>
+                <p><strong>Ator Primário: </strong>Usuário</p>
+                <p>
+                  <strong>Pré-Condição: </strong>O usuário possui listas e/ou
+                  grupos de listas criados.
+                </p>
+                <p><strong>Cenário Principal:</strong></p>
+                <ol>
+                  <li>
+                    O usuário seleciona a lista e/ou o grupo de listas que
+                    deseja compartilhar.
+                  </li>
+                  <li>O usuário insere os e-mails dos destinatários.</li>
+                  <li>
+                    O sistema automaticamente adiciona o usuário à lista e/ou ao
+                    grupo de listas.
+                  </li>
+                </ol>
+                <p>
+                  <strong>Pós-Condição: </strong>Os destinatários têm acesso à
+                  lista e/ou ao grupo de listas compartilhado e podem visualizar
+                  e editar as listas nele contidas, ou sair do compartilhamento.
+                </p>
+              </li>
+              <li>
+                <h5>UC009 - Arquivar Lista de Compras e ou Grupo de Listas</h5>
+                <p>
+                  <strong>Descrição: </strong>O usuário arquiva uma lista de
+                  compras e/ou um grupo de listas existente.
+                </p>
+                <p><strong>Ator Primário: </strong>Usuário</p>
+                <p>
+                  <strong>Pré-Condição: </strong>O usuário possui uma lista de
+                  compras e/ou um grupo de listas criado.
+                </p>
+                <p><strong>Cenário Principal:</strong></p>
+                <ol>
+                  <li>
+                    O usuário seleciona a lista de compras e/ou um grupo de
+                    listas que deseja arquivar.
+                  </li>
+                  <li>
+                    O sistema marca a lista de compras e/ou um grupo de listas
+                    como arquivado.
+                  </li>
+                </ol>
+                <p>
+                  <strong>Pós-Condição: </strong>A lista de compras e/ou um
+                  grupo de listas é movido para o arquivo.
+                </p>
+              </li>
+              <li>
+                <h5>UC010 - Excluir Lista de Compras e ou Grupo de Listas</h5>
+                <p>
+                  <strong>Descrição: </strong>O usuário exclui uma lista de
+                  compras e/ou um grupo de listas existente.
+                </p>
+                <p><strong>Ator Primário: </strong>Usuário</p>
+                <p>
+                  <strong>Pré-Condição: </strong>O usuário possui uma lista de
+                  compras e/ou um grupo de listas criado.
+                </p>
+                <p><strong>Cenário Principal:</strong></p>
+                <ol>
+                  <li>
+                    O usuário seleciona a lista de compras e/ou um grupo de
+                    listas que deseja excluir.
+                  </li>
+                  <li>
+                    O usuário confirma a exclusão da lista e/ou do grupo de
+                    listas.
+                  </li>
+                  <li>
+                    O sistema envia para a lixeira a lista de compras e/ou um
+                    grupo de listas do sistema.
+                  </li>
+                  <li>
+                    Após 7 dias, o sistema remove permanentemente os itens
+                    adicionados à lixeira.
+                  </li>
+                </ol>
+                <p>
+                  <strong>Pós-Condição: </strong>A lista de compras e/ou um
+                  grupo de listas é excluído do sistema.
+                </p>
+              </li>
+              <li>
+                <h5>
+                  UC011 - Remover o Compartilhamento de um Usuário de uma Lista
+                  e/ou Grupo de Listas
+                </h5>
+                <p>
+                  <strong>Descrição: </strong>O usuário remove um membro de uma
+                  lista e/ou um grupo de listas.
+                </p>
+                <p><strong>Ator Primário: </strong>Usuário</p>
+                <p>
+                  <strong>Pré-Condição: </strong>O usuário é membro de uma lista
+                  e/ou um grupo de listas.
+                </p>
+                <p><strong>Cenário Principal:</strong></p>
+                <ol>
+                  <li>
+                    O usuário acessa a página de gerenciamento de
+                    compartilhamento da lista ou do grupo.
+                  </li>
+                  <li>O usuário seleciona o membro que deseja remover.</li>
+                  <li>O usuário confirma a remoção do membro.</li>
+                  <li>
+                    O sistema remove o membro da lista e/ou do grupo de listas.
+                  </li>
+                </ol>
+                <p>
+                  <strong>Pós-Condição: </strong>O membro é removido do
+                  compartilhamento.
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div id="documentacao-bpmn">
+            <h3>BPMN (Business Process Model and Notation)</h3>
+            <ul>
+              <li>
+                <h4>Acesso ao sistema</h4>
+                <img
+                  src="./images/bpmn-acesso_ao_sistema.svg"
+                  alt="BPMN - Acesso ao sistema"
+                />
+              </li>
+              <li>
+                <h4>Criar listas e/ou grupos de listas de compras</h4>
+                <img
+                  src="./images/bpmn-criar_listas.svg"
+                  alt="BPMN - Criar listas e/ou grupos de listas de compras"
+                />
+              </li>
+              <li>
+                <h4>Ações possíveis em uma lista</h4>
+                <img
+                  src="./images/bpmn-acoes_possiveis.svg"
+                  alt="BPMN - Ações possíveis em uma lista"
+                />
+              </li>
+              <li>
+                <h4>Editar itens da lista</h4>
+                <img
+                  src="./images/bpmn-editar_itens.svg"
+                  alt="BPMN - Editar itens da lista"
+                />
+              </li>
+              <li>
+                <h4>
+                  Compartilhamento de listas e/ou grupos de listas de compras
+                </h4>
+                <img
+                  src="./images/bpmn-compartilhamento.svg"
+                  alt="BPMN - Compartilhamento de listas e/ou grupos de listas de compras"
+                />
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
     </div>
-</body>
+
+    <script type="text/javascript" src="./requisitosFuncionais.js"></script>
+    <script type="text/javascript" src="./script.js"></script>
+  </body>
 </html>
