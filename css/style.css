@@ -1,65 +1,109 @@
-@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Raleway&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Raleway&display=swap");
 
 :root {
-    --fonte-principal: 'Kaushan Script', cursive;
-    --fonte-secundaria: 'Raleway', sans-serif;
-    --azul: #27488f;
-    --texto-cinza: #d9d9e3;
-    --fundo-cinza: #f9f3fa;
+  --fonte-principal: "Kaushan Script", cursive;
+  --fonte-secundaria: "Raleway", sans-serif;
+  --azul: #27488f;
+  --texto-cinza: #d9d9e3;
+  --fundo-cinza: #f9f3fa;
 }
 
 body {
-    font-family: var(--fonte-secundaria);
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    overflow: hidden;
+  font-family: var(--fonte-secundaria);
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
 }
 
-h1, h2 {
-    font-family: var(--fonte-principal);
-    font-size: 1.5rem;
-    padding-bottom: 20px;
+h1,
+h2 {
+  font-family: var(--fonte-principal);
+  font-size: 1.5rem;
+  padding-bottom: 20px;
+}
+
+p,
+li {
+  text-indent: 32px;
+  line-height: 24px;
 }
 
 img {
-    padding: 10px;
+  padding: 10px;
 }
 
-li {
-    list-style: inside;
-}	
+li:not(:first-child) {
+  list-style: inside;
+}
 
 .container {
-    display: flex;
-    overflow: hidden;
+  display: flex;
+  overflow: hidden;
 }
 
 .left {
-    padding: 20px;
-    width: 30vw;
-    height: 100vh;
-    background: var(--azul);
+  padding: 20px;
+  width: 30vw;
+  height: 100vh;
+  background: var(--azul);
 }
 
 .right {
-    background-color: var(--fundo-cinza);
-    color: var(--azul);
-    height: 100vh;
-    overflow: auto;
-    padding: 15px;
+  background-color: var(--fundo-cinza);
+  color: var(--azul);
+  height: 100vh;
+  overflow: auto;
+  padding: 15px;
 }
 
 .right section {
-    padding: 15px;
+  padding: 15px;
 }
 
 .btn {
-    display: block;
-    margin-bottom: 10px;
-    padding: 10px 20px;
-    color: var(--texto-cinza);
-    cursor: pointer;
-    text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  color: var(--texto-cinza);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#identidade-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#requisitos-funcionais-heading {
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+#requisitos-funcionais {
+  width: 100%;
+}
+
+#requisitos-funcionais-content {
+  border: 1px solid #D9D9E3;
+  border-radius: 16px;
+  padding: 8px 16px;
+  margin-top: 8px;
+}
+
+#requisitos-categoria,
+#requisitos-prioridade {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+#requisitos-descricao {
+  display: flex;
+}
+
+#requisitos-description-text {
+  text-indent: 4px;
+  text-align: justify;
 }
