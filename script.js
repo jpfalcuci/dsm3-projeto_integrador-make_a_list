@@ -1,9 +1,9 @@
 const c = (el) => document.querySelector(el);
 const cs = (el) => document.querySelectorAll(el);
 
-requisitosFuncionais.map((item, index) => {
+requisitosFuncionais.map((item) => {
   const reqFunc = document.createElement("div");
-  reqFunc.setAttribute("id", "requisitos-funcionais-content")
+  reqFunc.setAttribute("id", "requisitos-funcionais-content");
   const heading = document.createElement("h5");
   heading.innerHTML = item.titulo;
 
@@ -120,4 +120,182 @@ requisitosFuncionais.map((item, index) => {
   reqFunc.appendChild(descricaoContainer);
 
   c("#requisitos-funcionais").append(reqFunc);
+});
+
+requisitosNaoFuncionais.map((item) => {
+  const reqNaoFunc = document.createElement("div");
+  reqNaoFunc.setAttribute("id", "requisitos-nao-funcionais-content");
+  const heading = document.createElement("h5");
+  heading.innerHTML = item.titulo;
+
+  /*  ---- TIPO CONTAINER ---- */
+
+  const tipoContainer = document.createElement("div");
+  tipoContainer.setAttribute("id", "requisitos-tipo");
+  const tipo = document.createElement("p");
+  tipo.innerHTML = "Tipo:";
+
+  /*  ---- USABILIDADE ---- */
+
+  const inputUsabilidade = document.createElement("input");
+  inputUsabilidade.setAttribute("type", "checkbox");
+  item.tipo.usabilidade
+    ? inputUsabilidade.setAttribute("checked", item.tipo.usabilidade)
+    : null;
+  inputUsabilidade.setAttribute("disabled", true);
+
+  const labelUsabilidade = document.createElement("label");
+  labelUsabilidade.innerHTML = "Usabilidade";
+
+  /*  ---- DESEMPENHO ---- */
+
+  const inputDesempenho = document.createElement("input");
+  inputDesempenho.setAttribute("type", "checkbox");
+  item.tipo.desempenho
+    ? inputDesempenho.setAttribute("checked", item.tipo.desempenho)
+    : null;
+  inputDesempenho.setAttribute("disabled", true);
+
+  const labelDesempenho = document.createElement("label");
+  labelDesempenho.innerHTML = "Desempenho";
+
+  /*  ---- SEGURANÇA ---- */
+
+  const inputSeguranca = document.createElement("input");
+  inputSeguranca.setAttribute("type", "checkbox");
+  item.tipo.seguranca
+    ? inputSeguranca.setAttribute("checked", item.tipo.seguranca)
+    : null;
+  inputSeguranca.setAttribute("disabled", true);
+
+  const labelSeguranca = document.createElement("label");
+  labelSeguranca.innerHTML = "Segurança";
+
+  /*  ---- COMPATIBILIDADE ---- */
+
+  const inputCompatibilidade = document.createElement("input");
+  inputCompatibilidade.setAttribute("type", "checkbox");
+  item.tipo.compatibilidade
+    ? inputCompatibilidade.setAttribute("checked", item.tipo.compatibilidade)
+    : null;
+  inputCompatibilidade.setAttribute("disabled", true);
+
+  const labelCompatibilidade = document.createElement("label");
+  labelCompatibilidade.innerHTML = "Compatibilidade";
+
+  /* ---- ESCALABILIDADE ---- */
+
+  const inputEscalabilidade = document.createElement("input");
+  inputEscalabilidade.setAttribute("type", "checkbox");
+  item.tipo.escalabilidade
+    ? inputEscalabilidade.setAttribute("checked", item.tipo.escalabilidade)
+    : null;
+  inputEscalabilidade.setAttribute("disabled", true);
+
+  const labelEscalabilidade = document.createElement("label");
+  labelEscalabilidade.innerHTML = "Escalabilidade";
+
+  /*  ---- OBRIGATORIEDADE CONTAINER ---- */
+
+  const obrigatoriedadeContainer = document.createElement("div");
+  obrigatoriedadeContainer.setAttribute("id", "requisitos-obrigatoriedade");
+  const obrigatoriedade = document.createElement("p");
+  obrigatoriedade.innerHTML = "Obrigatoriedade:";
+
+  /*  ---- OBRIGATÓRIO ---- */
+
+  const inputObrigatorio = document.createElement("input");
+  inputObrigatorio.setAttribute("type", "checkbox");
+  item.obrigatoriedade.obrigatorio
+    ? inputObrigatorio.setAttribute("checked", item.obrigatoriedade.obrigatorio)
+    : null;
+  inputObrigatorio.setAttribute("disabled", true);
+
+  const labelObrigatorio = document.createElement("label");
+  labelObrigatorio.innerHTML = "Obrigatório";
+
+  /*  ---- DESEJÁVEL ---- */
+
+  const inputDesejavel = document.createElement("input");
+  inputDesejavel.setAttribute("type", "checkbox");
+  item.obrigatoriedade.desejavel
+    ? inputDesejavel.setAttribute("checked", item.obrigatoriedade.desejavel)
+    : null;
+  inputDesejavel.setAttribute("disabled", true);
+
+  const labelDesejavel = document.createElement("label");
+  labelDesejavel.innerHTML = "Desejável";
+
+  /*  ---- DURABILIDADE CONTAINER ---- */
+  const durabilidadeContainer = document.createElement("div");
+  durabilidadeContainer.setAttribute("id", "requisitos-durabilidade");
+  const durabilidade = document.createElement("p");
+  durabilidade.innerHTML = "Durabilidade:";
+
+  /*  ---- PERMANENTE ---- */
+
+  const inputPermanente = document.createElement("input");
+  inputPermanente.setAttribute("type", "checkbox");
+  item.durabilidade.permanente
+    ? inputPermanente.setAttribute("checked", item.durabilidade.permanente)
+    : null;
+  inputPermanente.setAttribute("disabled", true);
+
+  const labelPermanente = document.createElement("label");
+  labelPermanente.innerHTML = "Permanente";
+
+  /*  ---- TRANSITÓRIO ---- */
+
+  const inputTransitorio = document.createElement("input");
+  inputTransitorio.setAttribute("type", "checkbox");
+  item.durabilidade.transitorio
+    ? inputTransitorio.setAttribute("checked", item.durabilidade.transitorio)
+    : null;
+  inputTransitorio.setAttribute("disabled", true);
+
+  const labelTransitorio = document.createElement("label");
+  labelTransitorio.innerHTML = "Transitório";
+
+  /*  ---- DESCRIÇÃO ---- */
+
+  const descricaoContainer = document.createElement("div");
+  descricaoContainer.setAttribute("id", "requisitos-descricao");
+  const descricao = document.createElement("p");
+  descricao.innerHTML = `Descrição: ${item.descricao}`;
+
+  /* ----- ADICIONA ELEMENTOS AO D.O.M VIA JS ----- */
+
+  tipoContainer.appendChild(tipo);
+  tipoContainer.appendChild(inputUsabilidade);
+  tipoContainer.appendChild(labelUsabilidade);
+  tipoContainer.appendChild(inputDesempenho);
+  tipoContainer.appendChild(labelDesempenho);
+  tipoContainer.appendChild(inputSeguranca);
+  tipoContainer.appendChild(labelSeguranca);
+  tipoContainer.appendChild(inputCompatibilidade);
+  tipoContainer.appendChild(labelCompatibilidade);
+  tipoContainer.appendChild(inputEscalabilidade);
+  tipoContainer.appendChild(labelEscalabilidade);
+
+  obrigatoriedadeContainer.appendChild(obrigatoriedade);
+  obrigatoriedadeContainer.appendChild(inputObrigatorio);
+  obrigatoriedadeContainer.appendChild(labelObrigatorio);
+  obrigatoriedadeContainer.appendChild(inputDesejavel);
+  obrigatoriedadeContainer.appendChild(labelDesejavel);
+
+  durabilidadeContainer.appendChild(durabilidade);
+  durabilidadeContainer.appendChild(inputPermanente);
+  durabilidadeContainer.appendChild(labelPermanente);
+  durabilidadeContainer.appendChild(inputTransitorio);
+  durabilidadeContainer.appendChild(labelTransitorio);
+
+  descricaoContainer.appendChild(descricao);
+
+  reqNaoFunc.appendChild(heading);
+  reqNaoFunc.appendChild(tipoContainer);
+  reqNaoFunc.append(obrigatoriedadeContainer);
+  reqNaoFunc.append(durabilidadeContainer);
+  reqNaoFunc.append(descricaoContainer);
+
+  c("#requisitos-nao-funcionais").append(reqNaoFunc);
 });

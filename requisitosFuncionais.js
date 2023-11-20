@@ -1,4 +1,4 @@
-let requisitosFuncionais = [
+const requisitosFuncionais = [
   {
     id: 1,
     titulo: "RF001 - Cadastro de Usuário",

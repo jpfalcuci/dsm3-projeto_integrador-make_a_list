@@ -26,8 +26,8 @@ h2 {
 
 p,
 li {
-  text-indent: 32px;
   line-height: 24px;
+  text-align: justify;
 }
 
 img {
@@ -76,34 +76,33 @@ li:not(:first-child) {
   justify-content: space-evenly;
 }
 
-#requisitos-funcionais-heading {
+#requisitos-heading {
   font-weight: 700;
   margin-bottom: 12px;
+}
+
+.mt {
+  margin-top: 24px;
 }
 
 #requisitos-funcionais {
   width: 100%;
 }
 
-#requisitos-funcionais-content {
-  border: 1px solid #D9D9E3;
+#requisitos-funcionais-content,
+#requisitos-nao-funcionais-content {
+  border: 1px solid #d9d9e3;
   border-radius: 16px;
   padding: 8px 16px;
   margin-top: 8px;
 }
 
 #requisitos-categoria,
-#requisitos-prioridade {
+#requisitos-prioridade,
+#requisitos-tipo,
+#requisitos-obrigatoriedade,
+#requisitos-durabilidade {
   display: flex;
   align-items: center;
   gap: 4px;
-}
-
-#requisitos-descricao {
-  display: flex;
-}
-
-#requisitos-description-text {
-  text-indent: 4px;
-  text-align: justify;
 }
