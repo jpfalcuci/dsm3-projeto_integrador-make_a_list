@@ -5,13 +5,13 @@ requisitosFuncionais.map((item) => {
   const reqFunc = document.createElement("div");
   reqFunc.setAttribute("id", "requisitos-funcionais-content");
   const heading = document.createElement("h5");
-  heading.innerHTML = item.titulo;
+  heading.innerHTML = `<strong>${item.titulo}</strong>`;
 
   /*  ---- CATEGORIAS --- */
   const categoriaContainer = document.createElement("div");
   categoriaContainer.setAttribute("id", "requisitos-categoria");
   const categoria = document.createElement("p");
-  categoria.innerHTML = "Categoria: ";
+  categoria.innerHTML = "<strong>Categoria: </strong>";
 
   const inputEvidente = document.createElement("input");
   inputEvidente.setAttribute("type", "checkbox");
@@ -38,7 +38,7 @@ requisitosFuncionais.map((item) => {
   const prioridadeContainer = document.createElement("div");
   prioridadeContainer.setAttribute("id", "requisitos-prioridade");
   const prioridade = document.createElement("p");
-  prioridade.innerHTML = "Prioridade:";
+  prioridade.innerHTML = "<strong>Prioridade:</strong>";
 
   /* ----- Altíssima ----- */
 
@@ -93,7 +93,7 @@ requisitosFuncionais.map((item) => {
   const descricaoContainer = document.createElement("div");
   descricaoContainer.setAttribute("id", "requisitos-descricao");
   const descricao = document.createElement("p");
-  descricao.innerHTML = `Descrição: ${item.descricao}`;
+  descricao.innerHTML = `<strong>Descrição:</strong> ${item.descricao}`;
 
   /* ----- ADICIONA ELEMENTOS AO D.O.M VIA JS ----- */
   reqFunc.appendChild(heading);
@@ -126,14 +126,14 @@ requisitosNaoFuncionais.map((item) => {
   const reqNaoFunc = document.createElement("div");
   reqNaoFunc.setAttribute("id", "requisitos-nao-funcionais-content");
   const heading = document.createElement("h5");
-  heading.innerHTML = item.titulo;
+  heading.innerHTML = `<strong>${item.titulo}</strong>`;
 
   /*  ---- TIPO CONTAINER ---- */
 
   const tipoContainer = document.createElement("div");
   tipoContainer.setAttribute("id", "requisitos-tipo");
   const tipo = document.createElement("p");
-  tipo.innerHTML = "Tipo:";
+  tipo.innerHTML = "<strong>Tipo:</strong>";
 
   /*  ---- USABILIDADE ---- */
 
@@ -200,7 +200,7 @@ requisitosNaoFuncionais.map((item) => {
   const obrigatoriedadeContainer = document.createElement("div");
   obrigatoriedadeContainer.setAttribute("id", "requisitos-obrigatoriedade");
   const obrigatoriedade = document.createElement("p");
-  obrigatoriedade.innerHTML = "Obrigatoriedade:";
+  obrigatoriedade.innerHTML = "<strong>Obrigatoriedade:</strong>";
 
   /*  ---- OBRIGATÓRIO ---- */
 
@@ -227,10 +227,11 @@ requisitosNaoFuncionais.map((item) => {
   labelDesejavel.innerHTML = "Desejável";
 
   /*  ---- DURABILIDADE CONTAINER ---- */
+
   const durabilidadeContainer = document.createElement("div");
   durabilidadeContainer.setAttribute("id", "requisitos-durabilidade");
   const durabilidade = document.createElement("p");
-  durabilidade.innerHTML = "Durabilidade:";
+  durabilidade.innerHTML = "<strong>Durabilidade:</strong>";
 
   /*  ---- PERMANENTE ---- */
 
@@ -261,7 +262,7 @@ requisitosNaoFuncionais.map((item) => {
   const descricaoContainer = document.createElement("div");
   descricaoContainer.setAttribute("id", "requisitos-descricao");
   const descricao = document.createElement("p");
-  descricao.innerHTML = `Descrição: ${item.descricao}`;
+  descricao.innerHTML = `<strong>Descrição:</strong> ${item.descricao}`;
 
   /* ----- ADICIONA ELEMENTOS AO D.O.M VIA JS ----- */
 
@@ -298,4 +299,45 @@ requisitosNaoFuncionais.map((item) => {
   reqNaoFunc.append(descricaoContainer);
 
   c("#requisitos-nao-funcionais").append(reqNaoFunc);
+});
+
+function createUserContextContent(context) {
+  const listItem = document.createElement("div");
+  listItem.setAttribute("id", "users-contexts");
+
+  const title = document.createElement("h5");
+  title.innerHTML = `<strong>${context.id} - ${context.title}</strong>`;
+  listItem.appendChild(title);
+
+  const descriptionPara = document.createElement("p");
+  descriptionPara.innerHTML = `<strong>Descrição: </strong>${context.description}`;
+  listItem.appendChild(descriptionPara);
+
+  const primaryActorPara = document.createElement("p");
+  primaryActorPara.innerHTML = `<strong>Ator Primário: </strong>${context.primaryActor}`;
+  listItem.appendChild(primaryActorPara);
+
+  const preConditionPara = document.createElement("p");
+  preConditionPara.innerHTML = `<strong>Pré-Condição: </strong>${context.preCondition}`;
+  listItem.appendChild(preConditionPara);
+
+  const mainScenarioOl = document.createElement("ol");
+  context.mainScenario.forEach((scenario) => {
+    const scenarioLi = document.createElement("li");
+    scenarioLi.textContent = scenario;
+    mainScenarioOl.appendChild(scenarioLi);
+  });
+  listItem.appendChild(mainScenarioOl);
+
+  const postConditionPara = document.createElement("p");
+  postConditionPara.innerHTML = `<strong>Pós-Condição: </strong>${context.postCondition}`;
+  listItem.appendChild(postConditionPara);
+
+  return listItem;
+}
+
+const list = document.getElementById("casos-usos");
+userContexts.forEach((context) => {
+  const contextContent = createUserContextContent(context);
+  list.appendChild(contextContent);
 });

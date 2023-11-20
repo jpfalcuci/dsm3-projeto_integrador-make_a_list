@@ -38,6 +38,10 @@ li:not(:first-child) {
   list-style: inside;
 }
 
+strong {
+  font-weight: 700;
+}
+
 .container {
   display: flex;
   overflow: hidden;
@@ -90,8 +94,9 @@ li:not(:first-child) {
 }
 
 #requisitos-funcionais-content,
-#requisitos-nao-funcionais-content {
-  border: 1px solid #d9d9e3;
+#requisitos-nao-funcionais-content,
+#users-contexts {
+  border: 1px solid var(--texto-cinza);
   border-radius: 16px;
   padding: 8px 16px;
   margin-top: 8px;
@@ -105,4 +110,8 @@ li:not(:first-child) {
   display: flex;
   align-items: center;
   gap: 4px;
+}
+
+#doc-bpmn li {
+list-style: none;
 }
