@@ -46,6 +46,10 @@ strong {
   font-weight: 700;
 }
 
+#mt {
+  margin-top: 24px;
+}
+
 #img-centro {
   width: 100%;
   display: flex;

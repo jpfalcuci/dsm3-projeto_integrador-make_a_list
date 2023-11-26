@@ -341,3 +341,10 @@ userContexts.forEach((context) => {
   const contextContent = createUserContextContent(context);
   list.appendChild(contextContent);
 });
+
+briefing.map((info) => {
+  const paragraph = document.createElement("p");
+  paragraph.innerHTML = info.paragraph;
+
+  c("#briefing-content").append(paragraph);
+});

@@ -398,3 +398,26 @@ const userContexts = [
     postCondition: "O membro é removido do compartilhamento.",
   },
 ];
+
+const briefing = [
+  {
+    paragraph:
+      "O problema foi identificado no âmbito familiar e social, onde encontra-se a necessidade de criar e organizar listas com itens diversos a serem comprados. O problema reside na dificuldade de criar listas que permitam um fácil compartilhamento entre os usuários, onde todos possam ter acesso às atualizações em tempo real. A partir disso, definimos que uma solução digital seria ideal para providenciar uma solução que venha a sanar esse problema.",
+  },
+  {
+    paragraph:
+      "A aplicação destina-se a pessoas que participam ativamente de processos de compras e muitas vezes compartilham essa responsabilidade com terceiros, sendo familiares, amigos, colegas de trabalho, ou qualquer outro cenário.",
+  },
+  {
+    paragraph:
+      "Não há no mercado hoje uma referência de solução digital que sane esse problema especificamente. Há sim muitas soluções que permitem a criação de listas, mas o compartilhamento das mesmas com outros usuários, ou até mesmo com grupos de usuários não é uma funcionalidade muito explorada por estas.",
+  },
+  {
+    paragraph:
+      "Com a nossa proposta esperamos que os usuários possam encontrar maior facilidade na criação, organização e compartilhamento de listas de compras com outros usuários, grupos familiares, grupos de amigos, grupos de trabalho, conforme for necessário e relevante para os mesmos. ",
+  },
+  {
+    paragraph:
+      "Nosso objetivo final é desenvolver uma plataforma intuitiva que proporcione uma boa experiência de usuário e que, principalmente, facilite o processo de compras.",
+  },
+];
