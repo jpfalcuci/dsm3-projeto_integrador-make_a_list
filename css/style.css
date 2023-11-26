@@ -172,3 +172,38 @@ strong {
   align-items: center;
   margin-bottom: 8px;
 }
+
+#badges {
+  width: 70%;
+  display: flex;
+  justify-content: space-evenly;
+}
+#github-title h2 {
+  padding: 0;
+  margin: 0;
+}
+
+#github-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.github-btn {
+  border-radius: 0.625rem;
+  background: var(--dark-blue, #27488f);
+  color: #fff;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding: 1rem 0.75rem;
+  border: none;
+  outline: none;
+}
+
+.github-btn a {
+  color: #fff;
+  text-decoration: none;
+}
