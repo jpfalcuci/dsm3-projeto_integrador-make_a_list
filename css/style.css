@@ -150,3 +150,7 @@ strong {
 #doc-bpmn li {
   list-style: none;
 }
+
+#plano-acao-content {
+  margin-bottom: 12px;
+}
