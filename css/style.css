@@ -25,7 +25,7 @@ h1,
 h2 {
   font-family: var(--fonte-principal);
   font-size: 1.5rem;
-  padding-bottom: 20px;
+  padding-bottom: 16px;
 }
 
 p,
@@ -73,16 +73,16 @@ strong {
   color: var(--azul);
   height: 100vh;
   overflow: auto;
-  padding: 15px;
+  padding: 10px;
 }
 
 .right section {
-  padding: 15px;
+  padding: 10px;
 }
 
 .btn {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 4px;
   padding: 10px 20px;
   color: var(--texto-cinza);
   cursor: pointer;
