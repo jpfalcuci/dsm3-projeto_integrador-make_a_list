@@ -1,0 +1,80 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id                     String         @id @default(auto()) @map("_id") @db.ObjectId
+  name                   String
+  email                  String         @unique
+  password               String
+  created_at             DateTime       @default(now())
+  updated_at             DateTime       @updatedAt
+  purchase_list_ids      String[]       @db.ObjectId
+  purchase_list          PurchaseList[] @relation(fields: [purchase_list_ids], references: [id])
+  created_purchase_lists PurchaseList[] @relation("createdBy")
+  groups_ids             String[]       @db.ObjectId
+  groups_list            Groups[]       @relation(fields: [groups_ids], references: [id])
+  created_groups         Groups[]       @relation("createdGroup")
+  created_products       Products[]     @relation("createdProducts")
+  checked_products       Products[]     @relation("checkedProducts")
+}
+
+model Groups {
+  id                String         @id @default(auto()) @map("_id") @db.ObjectId
+  name              String
+  color             String
+  icon              String
+  updated_at        DateTime       @updatedAt
+  created_at        DateTime       @default(now())
+  user_ids          String[]       @db.ObjectId
+  user_list         User[]         @relation(fields: [user_ids], references: [id])
+  created_by_id     String         @db.ObjectId
+  created_by        User           @relation("createdGroup", fields: [created_by_id], references: [id])
+  purchase_list_ids String[]       @db.ObjectId
+  purchase_list     PurchaseList[] @relation(fields: [purchase_list_ids], references: [id])
+}
+
+model PurchaseList {
+  id            String     @id @default(auto()) @map("_id") @db.ObjectId
+  name          String
+  color         String
+  icon          String
+  delete        Boolean    @default(false)
+  delete_at     DateTime?
+  total         Float      @default(0.0)
+  created_at    DateTime   @default(now())
+  updated_at    DateTime   @updatedAt
+  shared_ids    String[]   @db.ObjectId
+  shared        User[]     @relation(fields: [shared_ids], references: [id])
+  created_by_id String     @db.ObjectId
+  created_by    User       @relation("createdBy", fields: [created_by_id], references: [id])
+  groupsId      String[]   @db.ObjectId
+  Groups        Groups[]   @relation(fields: [groupsId], references: [id])
+  Products      Products[]
+}
+
+model Products {
+  id               String       @id @default(auto()) @map("_id") @db.ObjectId
+  name             String
+  quantity         Int          @default(1)
+  category         String
+  price            Float        @default(0.0)
+  place            String
+  created_at       DateTime     @default(now())
+  updated_at       DateTime     @updatedAt
+  checked          Boolean      @default(false)
+  checked_by_id    String?      @db.ObjectId
+  checked_by       User         @relation("checkedProducts", fields: [created_by_id], references: [id])
+  purchase_list_id String       @db.ObjectId
+  Purchase_list    PurchaseList @relation(fields: [purchase_list_id], references: [id])
+  created_by_id    String       @db.ObjectId
+  created_by       User         @relation("createdProducts", fields: [created_by_id], references: [id])
+}
